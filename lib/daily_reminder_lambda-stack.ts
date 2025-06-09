@@ -11,11 +11,12 @@ export class DailyReminderLambdaStack extends cdk.Stack {
 
 
     const reminderFunction = new NodejsFunction(this, 'DailyReminderFunction', {
-      runtime: Runtime.NODEJS_22_X,
+      runtime: Runtime.NODEJS_20_X,
       entry: path.join(__dirname, '../lambda/handler.ts'),
       handler: 'handler',
       environment: {
         REGION: 'us-east-1',
+        EMAIL_SOURCE: 'noreply@example.com',
       },
     });
 
