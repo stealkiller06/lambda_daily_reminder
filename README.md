@@ -13,7 +13,7 @@ The application consists of the following AWS components:
 
 ## Prerequisites
 
-- Node.js 22.x or later
+- Node.js 20.x or later
 - AWS CLI configured with appropriate credentials
 - AWS CDK CLI installed (`npm install -g aws-cdk`)
 - An AWS account with appropriate permissions
@@ -60,6 +60,7 @@ DailyReminderLambda/
 The Lambda function uses the following environment variables:
 
 - `REGION`: AWS region (default: us-east-1)
+- `EMAIL_SOURCE`: Verified SES email used as the sender address
 
 ## IAM Permissions
 
